@@ -26,7 +26,6 @@ const achivement = [
 const Achievements: React.FC = () => {
     return (
         <div className="bg-[url('https://abffreightsolution.com/wp-content/uploads/2021/06/home1-section-3.png')]" >
-            {/* <img src="https://abffreightsolution.com/wp-content/uploads/2021/06/home1-section-3.png" alt="achievements-image"></img> */}
             <div className="flex flex-col justify-center items-center py-8">
                 <h1 className="font-semibold text-5xl mb-4"> Our <a className="text-[#109cc7]">Achievements</a> </h1>
                 <p className="w-2/3 text-lg">At ABF Logistics, our achievements in the freight and logistics industry are a testament to our global service.
@@ -34,9 +33,9 @@ const Achievements: React.FC = () => {
                 </p>
             </div>
             <div className="flex gap-5 mx-12 py-12">
-                {achivement.map((item)=> {
+                {achivement.map((item, index)=> {
                     return (
-                        <div className="text-center">
+                        <div className="text-center" key={index}>
                             <div className="text-4xl font-semibold">{`${item.total}+`}</div>
                             <div className="text-lg font-semibold my-2">{item.title}</div>
                             <div>{item.desc}</div>

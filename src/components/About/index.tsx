@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link";
-import Headers from "../Header";
 
 const About: React.FC = () => {
     return (

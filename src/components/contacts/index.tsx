@@ -1,6 +1,7 @@
 "use client";
 
 import axios from "axios";
+import { FormikHelpers } from 'formik';
 import { Field, Form, Formik } from 'formik';
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
@@ -19,13 +20,14 @@ const Contact: React.FC = () => {
 
     const {replace} = useRouter();
 
-    const handleSubmitted = useCallback(async (data: DataProps, FormikHelpers: ({
-        resetForm: any; name: '', email: '', subject: '', message: ''
-    })) => {
-        await axios.post("http://localhost:3000/dataUser", data);
-        FormikHelpers.resetForm();
-        return replace("/table")
-    }, [])
+    const handleSubmitted = useCallback(
+        async (data: DataProps, FormikHelpers: FormikHelpers<DataProps>) => {
+            await axios.post("http://localhost:3000/dataUser", data);
+            FormikHelpers.resetForm();
+            return replace("/table");
+        },
+        []
+    );
 
     const validate = (value: string) => {
         let errorMessage;

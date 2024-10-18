@@ -29,7 +29,7 @@ const Goals: React.FC = () => {
             <div className="flex mb-8">
                 {achievementList.map((item, index) => {
                     return (
-                        <div className="flex flex-col justify-center items-center text-center">
+                        <div className="flex flex-col justify-center items-center text-center" key={index}>
                             <div className="border-2 p-8 w-2/6 h-auto rounded-full flex justify-center bg-[#003B49] text-white hover:shadow-2xl">{index + 1}</div>
                             <div className="p-4">
                                 <h1 className="text-xl font-semibold mb-2">{`${index + 1}. ${item.title}`}</h1>

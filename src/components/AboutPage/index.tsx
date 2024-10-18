@@ -18,11 +18,6 @@ const services = [
     },
 ]
 
-interface IDetailProps {
-    firstService: string;
-    secondService: string;
-}
-
 const About: React.FC = () => {
     return (
         <div>
