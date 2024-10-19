@@ -2,8 +2,8 @@
 
 const Values: React.FC = () => {
     return (
-        <div style={{ background: '#003B49' }}>
-            <div className="flex items-center">
+        <div className="relative overflow-hidden" style={{ background: '#003B49' }}>
+            <div className="flex items-center relative z-10">
                 <div className="ml-12 w-2/3">
                     <h1 className="font-semibold text-5xl text-white py-6">Our Values & <a className="text-[#109cc7]"> Commitment</a></h1>
                     <p className="text-white text-lg">At ABF Logistics, we stand by our core principles.
